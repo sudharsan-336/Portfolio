@@ -62,9 +62,9 @@ const projects: Array<{
     {
       title: "Crypto Price Tracker",
       description: "It is a web-based Cryptocurrency Price Tracker built using HTML, CSS, JavaScript, and jQuery. It fetches real-time cryptocurrency data from the CoinGecko API. The application displays live prices of Bitcoin, Ethereum, and Dogecoin in USD.",
-      image: "crypto.png",
-      github: "https://github.com/Sudharsan-336/Chatbot-AI.git",
-      live: "#",
+      image: "cryptoplace.png",
+      github: "https://github.com/sudharsan-336/Cryto-Currency-Tracer.git",
+      live: "https://crytocurrency-tracer.vercel.app/",
     },
     {
       title: "Weather Application",

@@ -1,11 +1,11 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Home, Briefcase, Code, FileText, Mail, Menu, X } from "lucide-react";
+import { Info, Briefcase, Code, FileText, Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { path: "/", label: "Home", icon: Home },
+  { path: "/", label: "About", icon: Info },
   { path: "/projects", label: "Projects", icon: Briefcase },
   { path: "/skills", label: "Skills", icon: Code },
   { path: "/resume", label: "Resume", icon: FileText },
@@ -49,10 +49,9 @@ export const Navigation = () => {
                 <NavLink
                   to={item.path}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                      isActive
-                        ? "bg-primary text-primary-foreground glow-text"
-                        : "text-muted-foreground hover:text-foreground"
+                    `flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${isActive
+                      ? "bg-primary text-primary-foreground glow-text"
+                      : "text-muted-foreground hover:text-foreground"
                     }`
                   }
                 >
@@ -99,10 +98,9 @@ export const Navigation = () => {
                       to={item.path}
                       onClick={() => setIsOpen(false)}
                       className={({ isActive }) =>
-                        `flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-lg transition-all duration-300 ${
-                          isActive
-                            ? "bg-primary text-primary-foreground glow-text scale-105"
-                            : "glass-card text-muted-foreground hover:text-foreground hover:scale-[1.02]"
+                        `flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-lg transition-all duration-300 ${isActive
+                          ? "bg-primary text-primary-foreground glow-text scale-105"
+                          : "glass-card text-muted-foreground hover:text-foreground hover:scale-[1.02]"
                         }`
                       }
                     >
