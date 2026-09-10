@@ -78,7 +78,7 @@ const projects: Array<{
       description: "Built a full-stack AI chatbot that provides real-time responses using Google Gemini AI with a modern UI. Implemented secure backend APIs with Node.js and MongoDB for fast and scalable performance. Designed a responsive interface using Tailwind CSS for smooth user experience across devices.",
       image: "GPT.png",
       github: "https://github.com/Sudharsan-336/Chatbot-AI.git",
-      live: "#",
+      live: "",
     },
   ];
 
@@ -136,7 +136,6 @@ export default function Projects() {
                       </a>
                     </Button>
 
-                    {/* Show Live button only if link exists */}
                     {project.live && (
                       <Button size="sm" className="flex-1" asChild>
                         <a href={project.live} target="_blank" rel="noopener noreferrer">
