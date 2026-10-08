@@ -7,6 +7,8 @@ const skills = [
   { name: "HTML", level: 90, color: "from-cyan-500 to-blue-500" },
   { name: "CSS", level: 85, color: "from-blue-500 to-purple-500" },
   { name: "JavaScript", level: 75, color: "from-yellow-400 to-orange-500" },
+  { name: "React", level: 70, color: "from-violet-500 to-purple-600" },
+  { name: "Spring Boot", level: 65, color: "from-green-500 to-lime-500" },
   { name: "Git and GitHub", level: 75, color: "from-pink-500 to-rose-500" },
 ];
 
