@@ -16,7 +16,7 @@ export default function Hero() {
     <div className="min-h-screen relative overflow-hidden">
       <ParticlesBackground />
       <Scene3D />
-      
+
       {/* Gradient Blur Effects */}
       <div className="absolute top-10 left-10 md:top-20 md:left-20 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full blur-[100px] animate-float" />
       <div className="absolute bottom-10 right-10 md:bottom-20 md:right-20 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full blur-[100px] animate-float" style={{ animationDelay: "2s" }} />
@@ -72,7 +72,7 @@ export default function Hero() {
               transition={{ delay: 1 }}
               whileHover={{ scale: 1.02, y: -5 }}
             >
-              <motion.h2 
+              <motion.h2
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 gradient-text"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -80,19 +80,21 @@ export default function Hero() {
               >
                 About Me
               </motion.h2>
-              <motion.p 
+              <motion.p
                 className="text-muted-foreground leading-relaxed text-sm sm:text-base lg:text-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2 }}
               >
-                Final-year Computer Science and Business Systems (CSBS) student with hands-on experience in {" "}
+                I’m a final-year Computer Science and Business Systems (CSBS) student passionate about Java Full-Stack Development. I have hands-on experience with {" "}
                 <span className="text-primary font-semibold">Java</span>,{" "}
-                <span className="text-primary font-semibold">MySQL</span>, and modern web technologies including{" "}
+                <span className="text-primary font-semibold">Spring Boot</span>,{" "}
+                <span className="text-primary font-semibold">React</span>,{" "}
+                <span className="text-primary font-semibold">JavaScript</span>,{" "}
                 <span className="text-primary font-semibold">HTML</span>,{" "}
-                <span className="text-primary font-semibold">CSS</span>,{" "}
-                <span className="text-primary font-semibold">JavaScript</span>, and{" "} 
-                <span className="text-primary font-semibold">React</span>. I enjoy breaking down complex problems into structured solutions and have a genuine curiosity for how technology and business intersect. I'm now looking for an entry-level software development role where I can apply what I've learned, sharpen my skills further, and contribute to a team that values growth and innovation.
+                <span className="text-primary font-semibold">CSS</span>,
+                <span className="text-primary font-semibold">MySQL</span>, and{" "}
+                <span className="text-primary font-semibold">REST APIs</span>, {" "} along with experience building web-based projects. I enjoy solving problems, learning new technologies, and turning ideas into practical applications. I’ve also strengthened my problem-solving skills by solving 200+ coding problems on LeetCode.
               </motion.p>
             </motion.div>
 
@@ -117,12 +119,12 @@ export default function Hero() {
                   }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20, scale: 0.6 }}
-                  animate={{ 
-                    opacity: 1, 
+                  animate={{
+                    opacity: 1,
                     y: 0,
                     scale: 1
                   }}
-                  transition={{ 
+                  transition={{
                     delay: 1.2 + index * 0.12,
                     type: "spring",
                     stiffness: 260,
