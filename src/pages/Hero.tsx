@@ -2,13 +2,26 @@ import { motion } from "framer-motion";
 import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { Scene3D } from "@/components/Scene3D";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Github, Linkedin, Instagram } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Instagram, } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const LeetCodeIcon = ({ size = 24 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z" />
+  </svg>
+);
+
 const socialLinks = [
-  { icon: Github, href: "https://github.com/Sudharsan-336", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/sudharsan336", label: "LinkedIn" },
-  { icon: Instagram, href: "https://www.instagram.com/classy_sudhan", label: "Instagram" },
+  { icon: Github, href: "https://github.com/Sudharsan-336", label: "GitHub", }, 
+  { icon: Linkedin, href: "https://www.linkedin.com/in/sudharsan336", label: "LinkedIn", }, 
+  { icon: LeetCodeIcon, href: "https://leetcode.com/u/Sudharsan-336/", label: "LeetCode", },
+  { icon: Instagram, href: "https://www.instagram.com/classy_sudhan/", label: "Instagram", }, 
 ];
 
 export default function Hero() {
@@ -99,81 +112,20 @@ export default function Hero() {
             </motion.div>
 
             {/* Social Links */}
-            <motion.div
-              className="flex gap-4 justify-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2 }}
-            >
-              {socialLinks.map((social, index) => (
-                <motion.a
+            <div className="flex gap-4 justify-center">
+              {socialLinks.map((social) => (
+                <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative glass-card p-3 rounded-full transition-all duration-300"
-                  whileHover={{
-                    y: -12,
-                    rotate: [0, -6, 6, 0],
-                    scale: 1.16,
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: 20, scale: 0.6 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    scale: 1
-                  }}
-                  transition={{
-                    delay: 1.2 + index * 0.12,
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 18
-                  }}
+                  aria-label={social.label}
+                  className="glass-card p-3 rounded-full text-primary"
                 >
-                  <motion.span
-                    className="absolute inset-1 rounded-full bg-gradient-to-br from-primary/40 via-transparent to-primary/40 blur-md opacity-60"
-                    animate={{
-                      opacity: [0.35, 0.7, 0.35],
-                      scale: [0.9, 1.12, 0.9],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      repeatType: "mirror",
-                      delay: index * 0.25,
-                    }}
-                  />
-                  <motion.span
-                    className="absolute inset-0 rounded-full border border-primary/50"
-                    animate={{
-                      rotate: [0, 360],
-                    }}
-                    transition={{
-                      duration: 7,
-                      repeat: Infinity,
-                      ease: "linear",
-                      delay: index * 0.3,
-                    }}
-                  />
-                  <motion.div
-                    className="relative z-10 flex items-center justify-center text-primary"
-                    animate={{
-                      scale: [1, 1.07, 1],
-                      filter: ["drop-shadow(0 0 0px rgba(59,130,246,0))", "drop-shadow(0 0 10px rgba(59,130,246,0.35))", "drop-shadow(0 0 0px rgba(59,130,246,0))"],
-                    }}
-                    transition={{
-                      duration: 2.1,
-                      repeat: Infinity,
-                      repeatDelay: 0.5,
-                      delay: index * 0.18,
-                    }}
-                  >
-                    <social.icon size={24} />
-                  </motion.div>
-                </motion.a>
+                  <social.icon size={24} />
+                </a>
               ))}
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
